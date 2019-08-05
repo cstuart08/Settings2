@@ -18,9 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.67881287618497599" green="0.17613584047061998" blue="0.70488584844559588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="54C-Ls-YPG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.67881287619999997" green="0.1761358405" blue="0.70488584840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="EPx-mC-o9o">
+                            <rect key="frame" x="0.0" y="208" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.67881287619999997" green="0.1761358405" blue="0.70488584840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="136" id="tED-tb-zOF" customClass="SettingTableViewCell" customModule="Settings2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="136"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tED-tb-zOF" id="Mt7-3z-exa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
@@ -44,6 +55,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnd-Rt-YTo">
                                                     <rect key="frame" x="325" y="41.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="settingSwitchValueChanged:" destination="tED-tb-zOF" eventType="valueChanged" id="R9B-6s-5zT"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>

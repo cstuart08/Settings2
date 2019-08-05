@@ -15,17 +15,26 @@ class SettingTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SettingController.sharedInstance.settings.count
     }
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
         
         let setting = SettingController.sharedInstance.settings[indexPath.row]
         cell.setting = setting
+        cell.delegate = self
         
-     return cell
-     }
+        return cell
+    }
 }
+
+extension SettingTableViewController: SettingTableViewCellDelegate {
+    func cellSettingSwitchValueChanged(cell: SettingTableViewCell, isOn: Bool) {
+        <#code#>
+    }
+}
+
+
