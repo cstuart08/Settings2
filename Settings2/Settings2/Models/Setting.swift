@@ -10,10 +10,10 @@ import UIKit
 
 class Setting {
     let name: String
-    let icon: UIImage
+    let icon: UIImage?
     let isOn: Bool
     
-    init(name: String, icon: UIImage, isOn: Bool = false) {
+    init(name: String, icon: UIImage?, isOn: Bool = false) {
         self.name = name
         self.icon = icon
         self.isOn = isOn
