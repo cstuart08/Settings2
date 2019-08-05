@@ -32,8 +32,16 @@ class SettingTableViewController: UITableViewController {
 }
 
 extension SettingTableViewController: SettingTableViewCellDelegate {
+    // cell gets switched, calls delegate (which is in tableView)
     func cellSettingSwitchValueChanged(cell: SettingTableViewCell, isOn: Bool) {
-        <#code#>
+        // grab setting off the cell
+        guard let setting = cell.setting,
+            //find index path of the cell (to be reloaded later)
+            let indexPath = tableView.indexPath(for: cell) else { return }
+        // setting controller updates the setting
+        SettingController.sharedInstance.setIsOn(for: setting, isOn: isOn)
+        //reload cell's row
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 
