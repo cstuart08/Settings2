@@ -14,12 +14,12 @@
         <scene sceneID="Wcc-4p-ScP">
             <objects>
                 <tableViewController id="eZi-8p-Goq" customClass="SettingTableViewController" customModule="Settings2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Fr-Eb-G90">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Fr-Eb-G90">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="136" id="tED-tb-zOF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="136" id="tED-tb-zOF" customClass="SettingTableViewCell" customModule="Settings2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tED-tb-zOF" id="Mt7-3z-exa">
@@ -55,6 +55,11 @@
                                         <constraint firstItem="VZ9-eA-8Ik" firstAttribute="leading" secondItem="Mt7-3z-exa" secondAttribute="leadingMargin" id="w5x-Dm-xAa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImageView" destination="yJW-xo-mGS" id="pfj-qs-9OB"/>
+                                    <outlet property="nameLabel" destination="BvV-6N-O8Q" id="jNa-m5-tUV"/>
+                                    <outlet property="settingSwitch" destination="gnd-Rt-YTo" id="IXN-Jx-Yln"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

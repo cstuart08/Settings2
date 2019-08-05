@@ -11,12 +11,30 @@ import UIKit
 class SettingTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var settingSwitch: UISwitch!
     
     //MARK: - Properties
     
     // landing pad
-    var setting: Setting?
+    var setting: Setting? {
+        didSet {
+            updateViews()
+        }
+    }
     
     //MARK: - Custom Methods
-
+    
+    func updateViews() {
+        if let setting = setting {
+            iconImageView.image = setting.icon
+            nameLabel.text = setting.name
+            settingSwitch.isOn = setting.isOn
+            
+            backgroundColor = setting.isOn ? .lightGray : .white
+        } else {
+            
+        }
+    }
 }
